@@ -1,0 +1,81 @@
+\subsection{Task 1.2}
+    \subsubsection{Describe all functional requirements that can be inferred from the project description.}
+        \textbf{Sinh viên:}
+            \begin{itemize}
+                \item Sinh viên có thể tải tệp lên hệ thống, chọn máy in và chỉ định các thuộc tính in như khổ giấy, trang, in một mặt hoặc hai mặt, số bản được in,...
+                \item Sinh viên có thể xem lịch sử in trong một khoảng thời gian kèm theo bản tóm tắt số trang đã in cho từng kích thước trang.
+                \item Sinh viên có thể mua thêm số lượng giấy để in nhiều hơn số tờ mặc định được cấp sẵn.
+                \item Sinh viên thanh toán trả trước qua một số hệ thống thanh toán trực tuyến như BKPay.
+            \end{itemize}
+            
+        \textbf{Quản lý dịch vụ in (SPSO):}
+            \begin{itemize}
+                \item SPSO có quyền thêm máy in vào hệ thống.
+                \item SPSO có quyền kích hoạt một máy in trong hệ thống.
+                \item SPSO có quyền dừng hoạt động một máy in trong hệ thống.
+                \item SPSO có thể giới hạn và tùy chỉnh các định dạng tệp mà sinh viên có thể tải lên hệ thống.
+                \item SPSO có thể quản lý cấu hình của hệ thống như thay đổi số trang mặc định, thời điểm mà hệ thống sẽ cung cấp số trang mặc định cho tất cả sinh viên.
+                \item SPSO có thể xem lịch sử in ấn của tất cả sinh viên và tất cả các máy in.
+            \end{itemize}
+            
+        \textbf{Hệ thống:}
+            \begin{itemize}
+                \item Tất cả người dùng phải được xác thực bằng dịch vụ xác thực HCMUT\_SSO trước khi sử dụng hệ thống.
+                \item Giao diện web và mobile được hỗ trợ.
+                \item Hệ thống ghi lại các thao tác in ấn của tất cả sinh viên, bao gồm mã sinh viên, mã máy in, tập tin tên, thời gian bắt đầu và kết thúc in, số trang cho mỗi khổ giấy.
+                \item Các báo cáo về việc sử dụng hệ thống in được tạo tự động vào cuối mỗi tháng, mỗi năm và được lưu trữ trong hệ thống và SPSO có thể xem bất cứ lúc nào.
+                \item Trong mỗi học kỳ, trường sẽ cấp cho mỗi sinh viên một số lượng giấy A4 mặc định để in ấn.
+                \item Một trang giấy A3 có thành tiền bằng hai trang giấy A4.
+                \item Hệ thống lưu trữ thông tin của một máy in bao gồm ID, nhãn hiệu hoặc hãng sản xuất, mẫu mã, mô tả ngắn về máy in, vị trí máy in cụ thể là tên cơ sở của trường, tên tòa nhà và số phòng.
+            \end{itemize}
+    \subsubsection{Describe all non-functional requirements that can be inferred from the project description.}
+	\textbf{Yêu cầu về hiệu suất:}
+            \begin{itemize}
+                \item Các trang của ứng dụng web phải được tải trong thời gian không quá 3 giây trên kết nối internet với tốc độ truy cập trung bình.
+                \item Tốc độ phản hồi của hệ thống với các thao tác của người dùng diễn ra không quá 1 giây.
+                \item Hệ thống phải hỗ trợ ít nhất 100 người dùng đồng thời mà không gây ra giảm hiệu suất đáng kể (dưới 10\%).
+                \item Ứng dụng web không được sử dụng nhiều hơn 300MB RAM trên thiết bị người dùng.
+            \end{itemize}
+    
+        \textbf{Yêu cầu về bảo mật và an ninh:}
+            \begin{itemize}
+                \item Đảm bảo rằng tất cả người dùng đều phải xác thực thông qua dịch vụ xác thực HCMUT\_SSO trước khi sử dụng hệ thống.
+                \item Tại cùng 1 thời điểm, 1 tài khoản chỉ được đăng nhập trên 1 thiết bị.
+                \item Khóa tài khoản người dùng sau 5 lần đăng nhập sai mật khẩu liên tiếp.
+                \item Đảm bảo rằng người dùng chỉ có quyền truy cập và thực hiện các tác vụ phù hợp với vai trò của họ.
+                \item Triển khai biện pháp bảo vệ để ngăn chặn tấn công DDoS và đảm bảo sự ổn định của hệ thống.
+                \item Phần mềm phải tuân thủ luật pháp của Việt Nam về an toàn thông tin mạng.
+            \end{itemize}
+            
+        \textbf{Yêu cầu về độ tin cậy:}
+            \begin{itemize}
+                \item Hệ thống phải sẵn sàng và hoạt động một cách ổn định trong khoảng thời gian từ 6 giờ đến 22 giờ hằng ngày.
+                \item Đảm bảo rằng có hệ thống sao lưu định kỳ và khả năng phục hồi dữ liệu nhanh chóng trong trường hợp sự cố hoặc mất dữ liệu.
+                \item Tỉ lệ xảy ra lỗi không quá 0.5\%.
+            \end{itemize}
+
+        \textbf{Yêu cầu về khả năng sử dụng:}
+                \begin{itemize}
+                \item Giao diện người dùng của ứng dụng web phải được thiết kế một cách trực quan và người sử dụng có thể làm quen sau không quá 10 phút.
+                \item Đảm bảo ứng dụng web có thể hoạt động hiệu quả trên nhiều trình duyệt web phổ biến (Chrome, Firefox, Safari, Edge) và phải đáp ứng trên các loại thiết bị (máy tính xách tay, điện thoại thông minh, máy tính bảng).
+                \item Hệ thống phải hỗ trợ các hệ điều hành phổ biến (iOS, Android, Windows).
+                \item Hệ thống cần hỗ trợ ít nhất 2 ngôn ngữ (Anh và Việt) và cung cấp lựa chọn để người dùng có thể chọn ngôn ngữ phù hợp với họ.
+                \item Đảm bảo hệ thống có thể làm việc với nhiều định dạng và thuộc tính file khác nhau
+                \end{itemize} 
+                
+        \textbf{Yêu cầu về khả năng quản lí:}
+                \begin{itemize}
+                \item Hệ thống phải kết nối với hệ thống thanh toán trực tuyến (ví dụ: BKPay) và kiểm tra thanh toán thành công trước khi cho phép in.
+                \item Đảm bảo rằng SPSO có thể dễ dàng thêm, bật/tắt máy in, và chỉnh sửa thông tin máy in.
+                \item Đảm bảo rằng SPSO có khả năng thay đổi cấu hình hệ thống như số trang mặc định, ngày mà hệ thống cung cấp số trang mặc định cho sinh viên, và danh sách các định dạng tệp cho phép.
+                \end{itemize}
+                
+        \textbf{Yêu cầu về khả năng bảo trì:}
+                \begin{itemize}
+                \item Thực hiện kiểm tra định kỳ mỗi 3 tháng để đảm bảo rằng hệ thống đang hoạt động đúng cách và tuân thủ các tiêu chuẩn bảo mật và hiệu suất.
+                \item Thời gian bảo trì nâng cấp, sửa lỗi hoặc cập nhật hệ thống không kéo dài quá 1 giờ.
+                \end{itemize}
+                
+        \textbf{Yêu cầu về khả năng mở rộng:} Hệ thống có thể mở rộng số lượng máy in, số lượng người truy cập cùng lúc trong hệ thống mà không gây ra giảm hiệu suất đáng kể (dưới 10\%) trong tương lai lên gấp đôi. \\
+        
+        \textbf{Yêu cầu về tính toàn vẹn, chính xác:} Kết quả tính toán giá tiền của đơn hàng luôn chính xác 100\%.  

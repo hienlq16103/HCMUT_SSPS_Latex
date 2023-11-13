@@ -1,0 +1,67 @@
+\subsection{Task 1.1}
+    \subsubsection{Describe the domain context of a smart printing service for students at HCMUT}
+    Tác dụng của máy in trong thời đại công nghệ số là điều mà không ai có thể phủ nhận, mang đến tính ứng dụng cao, hiệu quả kinh tế lớn. Hiện nay, hầu hết các trường học đều trang bị hệ thống máy in, giải quyết nhanh chống việc in ấn tài liệu, nâng cao hiệu quả và chất lượng học tập của các học sinh, sinh viên.\\
+    
+    Máy in ngày nay được tích hợp rất nhiều chức năng, thao tác in ấn đơn giản dễ tiếp cận người dùng. Tuy nhiên, khi số lượng người dùng càng tăng thì việc quản lí hệ thống máy in này càng trở nên khó khăn và dễ dàng vượt ra khỏi tầm kiêm soát. Các hoạt động như in sai tài liệu, quên lấy bản in từ máy in, vô ý in nhiều lần một tài liệu cụ thể, in tài liệu một mặt thay vì hai mặt… là những đặc điểm của lãng phí in ấn trong nội bộ tổ chức. Do đó, việc triển khai hệ thống quản lí in ấn (HCMUT\_SSPS) phải được đề cao hơn bao giờ hết, giúp giảm những chi phí không đáng có, xử lý yêu cầu một cách tự động nhằm hướng tới một tương lai in ấn xanh hơn.\\
+
+    Dịch vụ in ấn thông minh dành cho sinh viên (HCMUT\_SSPS) trong bài tập lớn này có các đặc điểm chính sau:
+    \begin{itemize}
+    \item Hệ thống quản lí chuỗi các máy in trong khuôn viên trường.
+    \item Quy mô vừa và nhỏ, đáp ứng đủ các tính năng cơ bản của việc in ấn tài liệu.
+    \item Đối tượng người dùng là sinh viên trường Đại học Bách Khoa.
+    \item Sinh viên sẽ được nhà trường cung cấp một số lượng trang A4 mặc định để in trong mỗi học kì.
+    \item Hỗ trợ tính năng mua thêm trang in (Buy Printing Pages) và thanh toán trực tuyến.
+    \end{itemize}
+
+    Từ những phân tích trên, HCMUT\_SSPS cần được xây dựng đơn giản, dễ sử dụng, thân thiện với người dùng. Hơn nữa, chúng ta cần tập trung vào vấn đề bảo mật thông tin vì dịch vụ này có cung cấp chức năng thanh toán điện tử.
+    \subsubsection{Who are relevant stakeholders? What are their current needs?}
+    Với nhu cầu sử dụng máy in cao của sinh viên, hệ thống HCMUT\_SPSS sẽ có những cổ đông (stakeholders) có hứng thú với hệ thống, bao gồm:
+    \begin{itemize}
+        \item Sinh viên trường Đại học Bách Khoa: Nhu cầu in tài liệu; tải (upload) tài liệu lên hệ thống; chọn địa điểm, thời gian, máy in; xác định các thuộc tính in theo nhu cầu; xem lịch sử in ấn; xem số dư tài khoản; nạp tiền và thanh toán cho việc in hoặc mua thêm giấy in.
+        \item Student Printing Service Officer (SPSO): Quản lý và kiểm soát máy in (thêm hoặc xóa máy in/bật/tắt); có khả năng thay đổi cấu hình của dịch vụ (số trang in cấp sẵn/giá thành của giấy in/định dạng file cho phép được in); xem lịch sử in ấn của từng sinh viên hoặc máy in; xem báo cáo theo tháng hoặc năm của từng sinh viên hoặc máy in.
+        \item Ban quản trị thuộc trường Đại học Bách Khoa: Tích hợp dịch vụ HCMUT\_SSO nhằm bảo đảm tính bảo mật; quản lý sinh viên.
+        \item Bộ phận kĩ thuật: Cung cấp hệ thống HCMUT\_SPSS, bảo đảm tính bảo mật, bảo trì, nâng cấp hệ thống để phù hợp với quy mô và nhu cầu sử dụng.
+    \end{itemize}
+    
+    Mỗi cổ đông đều có những nhu cầu như sau:
+    \begin{itemize}
+        \item Sinh viên trường Đại học Bách Khoa \text{--} là đối tượng chính của hệ thống HCMUT\_SPSS:
+        \begin{itemize}
+            \item Có thể xác định vị trí máy in thuận tiện, thuận tiện hơn cho sinh viên trong việc di chuyển.
+            \item Có thể tải tài liệu lên hệ thống, tiết kiệm thời gian chờ đợi, tăng sự tiện lợi.
+            \item Có khả năng xem số trang in hiện có, số dư tài khoản, nhằm tăng khả năng quản lý chi tiêu cho sinh viên, đồng thời tiện lợi cho việc nạp tiền và thanh toán.
+            \item Có tính năng giao tiếp nhằm hỗ trợ sinh viên khi dịch vụ gặp những trục trặc.
+        \end{itemize}
+        \item Student Printing Service Officer (SPSO) \text{--} Ban quản trị của hệ thống HCMUT\_SPSS:
+        \begin{itemize}
+            \item Có khả năng quản lý các máy in, thêm hoặc loại bỏ các máy in trong hệ thống, đồng thời cho phép máy in nào hoạt động; cập nhật phần mềm/phần cứng nhằm thuận tiện cho việc quản lý, bảo trì.
+            \item Có thể thay đổi cấu hình in như: cỡ giấy tiêu chuẩn, loại file, cỡ chữ, font chữ, giá thành, số trang mặc định để phù hợp với thị hiếu của sinh viên.
+            \item Xem được lịch sử in ấn của từng máy in và sinh viên, nhằm lấy được các thông tin cần thiết về những máy in hay tài liệu phổ biến để có phương pháp bố trí hiệu quả hơn.
+            \item Có tính năng hỗ trợ sinh viên khi sinh viên gặp trục trặc với hệ thống.
+        \end{itemize}
+        \item Ban quản trị thuộc trường Đại học Bách Khoa \text{--} là những người điều hành trường Đại học Bách Khoa:
+            \begin{itemize}
+                \item Tích hợp dịch vụ HCMUT\_SSO, vừa thuận tiện cho việc quản lý, vừa thuận tiện cho nhu cầu bảo mật.
+                \item Xem được các báo cáo hàng tháng/hàng năm của từng máy in hoặc cả một hệ thống để có thể kiểm soát dịch vụ, cải thiện, nâng cao chất lượng dịch vụ.
+            \end{itemize}
+            \item Bộ phận kĩ thuật \text{--} là bên cung cấp, duy trì dịch vụ hoạt động một cách hiệu quả:
+            \begin{itemize}
+                \item Bộ phận kĩ thuật cần những yêu cầu minh bạch nhằm phát triển hệ thống một cách chính xác, hiệu quả.
+            \end{itemize}
+    \end{itemize}
+    \subsubsection{In your opinion, what benefits HCMUT-SSPS will be for each stakeholder?}   
+	Khi hệ thống HCMUT\_SPSS được triển khai, nó sẽ mang lại nhiều lợi ích cho các stakeholders liên quan tới dự án. Những stakesholders được hưởng nhiều lợi ích nhất từ phần mềm SSPS là những nhân tố chính mà phần mềm này được thiết kế để phục vụ đó là 2 bên nhà trường và sinh viên.
+    \begin{itemize}
+        \item Sinh viên trường Đại học Bách khoa
+            \begin{itemize}
+                \item Hệ thống hỗ trợ sinh viên trong việc in ấn tài liệu học tập một cách tiện lợi, linh động hơn.
+                \item Thuận tiện trong việc thanh toán tài liệu đã được in ấn thông qua hệ thống BKPay.
+                \item Kiểm tra được lịch sử in tài liệu của cá nhân.
+            \end{itemize}
+        \item Ban quản trị trường Đại học Bách khoa
+            \begin{itemize}
+                \item Cung cấp cho sinh viên một tiện ích mới nhằm nâng cao chất lượng học tập.
+                \item Cải thiện cơ sở vật chất, nâng cao chất lượng môi trường giáo dục của trường Đại học Bách khoa.
+                \item Nhờ chức năng thu thập và báo cáo dữ liệu. Nhà trường có thể theo dõi thói quen, hành vi in tài liệu của sinh viên một cách tiện lợi hơn, nhờ đó chất lượng của dịch vụ HCMUT\_SSPS không ngừng được cải thiện.
+            \end{itemize}
+    \end{itemize}

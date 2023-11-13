@@ -1,0 +1,183 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide,amssymb,epsfig,latexsym,multicol,array,hhline,fancyhdr}
+\usepackage{vntex}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+
+\newtheorem{theorem}{{\bf Theorem}}
+\newtheorem{property}{{\bf Property}}
+\newtheorem{proposition}{{\bf Proposition}}
+\newtheorem{corollary}[proposition]{{\bf Corollary}}
+\newtheorem{lemma}[proposition]{{\bf Lemma}}
+
+\AtBeginDocument{\renewcommand*\contentsname{Mục lục}}
+\AtBeginDocument{\renewcommand*\refname{Tài liệu tham khảo}}
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+	\begin{tabular}{rl}
+		\begin{picture}(25,15)(0,0)
+			\put(0,-8){\includegraphics[width=8mm, height=8mm]{hcmut.png}}
+			%\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+		\end{picture}&
+		%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+		\begin{tabular}{l}
+			\textbf{\bf \ttfamily Trường Đại học Bách khoa Thành phố Hồ Chí Minh}\\
+			\textbf{\bf \ttfamily Khoa Khoa học và Kỹ thuật Máy tính}
+		\end{tabular} 	
+	\end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Bài tập lớn Công nghệ Phần mềm - Học kỳ 2023 - 2024}
+\fancyfoot[R]{\scriptsize \ttfamily Trang {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		\begin{center}
+			ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+			TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+			KHOA KHOA HỌC \& KỸ THUẬT MÁY TÍNH
+		\end{center}
+		
+		\vspace{1cm}
+		
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=3cm]{hcmut.png}
+			\end{center}
+		\end{figure}
+		
+		\vspace{1cm}
+		
+		
+		\begin{center}
+			\begin{tabular}{c}
+				\multicolumn{1}{l}{\textbf{{\Large CÔNG NGHỆ PHẦN MỀM (CO3001)}}}\\
+				~~\\
+				\hline
+				\\
+				\multicolumn{1}{l}{\textbf{{\Large Bài tập lớn}}}\\
+				\\
+				\textbf{{\Huge HCMUT\_SSPS}}\\
+				\\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\vspace{3cm}
+		
+		\begin{table}[h]
+			\begin{tabular}{rrl}
+				\hspace{5 cm} & Giảng viên hướng dẫn: & Lê Đình Thuận\\
+				& Sinh viên thực hiện: & Hà Thùy Dương - 2110103 \\
+				& & Lê Quang Hiển - 2113376\\
+ & & Bùi Quang Hưng - 2111392 \\
+ & & Võ Tấn Tài - 2110516 \\
+ & & Nguyễn Văn Ngọc Quang - 2114511\\
+			\end{tabular}
+		\end{table}
+		
+		\begin{center}
+			{\footnotesize Thành phố Hồ Chí Minh, Tháng 9/2023}
+		\end{center}
+	\end{titlepage}
+	
+	
+	%\thispagestyle{empty}
+	
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Task 1: Requirement elicitation}
+	\input{task1.1}
+        \input{task1.2}
+        \input{task1.3}
+        
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \newpage
+	\section{Task 2: System modelling}
+        \input{task2.1}
+        \input{task2.2}
+	\input{task2.3}
+        \input{task2.4}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \newpage
+	\section{Task 3: Architecture design}
+        \input{task3.1}
+        \input{task3.2}
+        
+        
+        
+        
+        
+        
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newpage
+	\section{Task 4: Implementation - Sprint 1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Task 5: Implementation - Sprint 2}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newpage
+	\addcontentsline{toc}{section}{\protect\numberline{}Tài liệu tham khảo}
+	%\renewcommand\refname{Tài liệu tham khảo}
+	\begin{thebibliography}{80}
+		\bibitem{bib1}
+		...
+		\bibitem{bib2}
+		...
+	\end{thebibliography}
+\end{document}
+
